@@ -37,8 +37,12 @@ app.post("/cadastrar", function(req, res){
     })
 })
 
-app.put("/excluir", function(req,res){
-    post
+app.get("/excluir/:id", function(req, res){
+    post.destroy({where: {'id': req.params.id}}).then(function(){
+        res.render("primeira_pagina")
+    }).catch(function(erro){
+        console.log("Erro ao excluir ou encontrar os dados do banco: " + erro)
+    })
 })
 
 app.listen(8081, function(){
