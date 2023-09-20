@@ -21,19 +21,24 @@ app.get("/consulta", function(req, res){
         console.log("Erro ao carregar dados do banco: " + erro)
     })
 })
-
 app.post("/cadastrar", function(req, res){
     post.create({
         nome: req.body.nome,
         telefone: req.body.telefone,
-        origem: req.body.origem,
-        data_contato: req.body.data_contato,
-        observacao: req.body.observacao
+        email : req.body.email,
+        idade: req.body.idade,
+        cep: req.body.cep,
+        
+
     }).then(function(){
         res.redirect("/")
     }).catch(function(erro){
         res.send("Falha ao cadastrar os dados: " + erro)
     })
+})
+
+app.put("/excluir", function(req,res){
+    post
 })
 
 app.listen(8081, function(){

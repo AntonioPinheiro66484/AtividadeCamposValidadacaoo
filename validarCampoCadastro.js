@@ -35,6 +35,23 @@ function validarForm() {
         origemErro.textContent = "";
     }
 
-    return (nomeErro.textContent === "" && telefoneErro.textContent === "" && dataErro.textContent === "" && origemErro.textContent === "");
-}
+    if(email.value ===""){
+        emailErro.textContent ="Por favor digite o e-mail corretamente.";
+        
+    }else{
+        emailErro.textContent = "";
+    }
+    if(idade.value ===""){
+        idadeErro.textContent ="Irforme sua idade.";
+        
+    }else{
+        cep.textContent = "";
+    }
+    if(cep.value ===""){
+        cepErro.textContent ="Irforme seu cep corretamente.";
+    }else{
+        cepErro.textContent = "";
+    }
 
+    return (nomeErro.textContent === "" && telefoneErro.textContent === "" && emailErro.textContent === "" && idadeErro.textContent === ""&& cepErro.textContent);
+}

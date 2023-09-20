@@ -1,23 +1,21 @@
 const db = require("./banco")
 
-const Agendamentos = db.sequelize.define('agendamentos',{
+const Cliente = db.sequelize.define('cliente',{
     nome:{
         type: db.Sequelize.STRING
     },
     telefone:{
         type: db.Sequelize.INTEGER
     },
-    origem:{
+    email:{
         type: db.Sequelize.STRING
     },
-    data_contato:{
-        type: db.Sequelize.DATE
+    idade:{
+        type: db.Sequelize.INTEGER
     },
-    observacao:{
-        type: db.Sequelize.TEXT
-    }
+    cep:{
+        type: db.Sequelize.STRING
+    },
 })
 
-//Agendamentos.sync({force:true})
-
-module.exports = Agendamentos
+module.exports = Cliente

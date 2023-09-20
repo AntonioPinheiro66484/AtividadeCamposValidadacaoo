@@ -6,7 +6,7 @@
         <div class="col bg-primary">
             <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">SISTEMA WEB</a>
+                    <a class="navbar-brand" href="#">E-commerce</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -53,26 +53,22 @@
                             </div>
                             <div class="mb-3 text-start">
                                 <label class="form-label">Telefone:</label>
-                                <input type="number" name="telefone" class="form-control" id="telefone" value="{{telefone}}">
+                                <input type="number" name="telefone" class="form-control" id="telefone" required  value="{{telefone}}">
                                 <span id="telefone-erro" class="erro"></span>
                             </div>
                             <div class="mb-3 text-start">
-                                <label class="form-label">Origem:</label>
-                                <select name="origem" class="form-select" aria-label="Default select example" required>
-                                    <option value="celular">Celular</option>
-                                    <option value="whatsapp">Whatsapp</option>
-                                    <option value="telefone_fixo">Telefone Fixo</option>
-                                </select>
-                                 <span id="origem-erro" class="erro"></span>
+                                <label class="form-label">Email:</label>
+                                <input type="number" name="idade" class="form-control" id="idade" required  value="{{email}}">
+                                <span id="email-erro" class="erro"></span>
                             </div>
                             <div class="mb-3 text-start">
-                                <label class="form-label">Data do Contato:</label>
-                                <input type="date" name="data_contato" class="form-control" id="data_contato" aria-describedby="emailHelp" required value="{{data_contato}}">
-                                <span id="data-erro" class="erro"></span>
+                                <label class="form-label">Idade:</label>
+                                <input type="number" name="idade" class="form-control" id="idade" required value="{{idade}}">
+                                <span id="idade-erro" class="erro"></span>
                             </div>
                             <div class="mb-3 text-start">
-                                <label class="form-label">Observação:</label>
-                                <textarea name="observacao" class="form-control" placeholder="" id="observacao" style="height: 100px">{{observacao}}</textarea>
+                                <label class="form-label">Cep</label>
+                                <textarea name="cep" class="form-control" placeholder="" id="cep" required  style="height: 100px">{{cep}}</textarea>
                             </div>
                             <div class="mb-3 text-start">
                                 <button type="submit" class="btn btn-primary">Atualizar</button>
